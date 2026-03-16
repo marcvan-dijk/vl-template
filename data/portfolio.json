@@ -1,20 +1,25 @@
 {
   "name": "Chetan",
   "headerTaglineOne": "Hello",
-  "headerTaglineTwo": "I'm Chetan Verma - curious",
-  "headerTaglineThree": "designer and devloper",
-  "headerTaglineFour": " based in New Delhi, India.",
+  "headerTaglineTwo": "De",
+  "headerTaglineThree": "Vlietlanden",
+  "headerTaglineFour": "Website",
   "darkMode": false,
   "socials": [
     {
       "id": "1",
-      "title": "Github",
-      "link": "https://github.com/chetanverma16"
+      "title": "Socie",
+      "link": "https://socie.nl/"
+    },
+    {
+      "id": "2",
+      "title": "Facebook",
+      "link": "https://www.facebook.com/groups/221193666469946/"
     },
     {
       "id": "5",
       "title": "Email",
-      "link": "mailto:hello@chetanverma.com"
+      "link": "mailto:info@vlietslanden.nl"
     }
   ]
 }
