@@ -6,7 +6,7 @@ import Button from "../Button";
 // Local Data
 import data from "../../data/portfolio.json";
 
-const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
+const Header = ({ handleHomeScroll, handleAboutScroll, handleContactScroll }) => {
   const router = useRouter();
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -60,29 +60,12 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               className={`absolute right-0 z-10 w-11/12 p-4 ${theme === "dark" ? "bg-slate-800" : "bg-white"
                 } shadow-md rounded-md`}
             >
-              {!isBlog ? (
-                <div className="grid grid-cols-1">
-                  <Button onClick={handleWorkScroll}>Work</Button>
-                  <Button onClick={handleAboutScroll}>About</Button>
-                  <Button
-                    onClick={() => window.open("mailto:hello@chetanverma.com")}
-                  >
-                    Contact
-                  </Button>
-                </div>
-              ) : (
-                <div className="grid grid-cols-1">
-                  <Button onClick={() => router.push("/")} classes="first:ml-1">
-                    Home
-                  </Button>
+              <div className="grid grid-cols-1">
+                <Button onClick={handleHomeScroll}>Home</Button>
+                <Button onClick={handleAboutScroll}>About</Button>
+                <Button onClick={handleContactScroll}>Contact</Button>
+              </div>
 
-                  <Button
-                    onClick={() => window.open("mailto:hello@chetanverma.com")}
-                  >
-                    Contact
-                  </Button>
-                </div>
-              )}
             </Popover.Panel>
           </>
         )}
@@ -98,11 +81,9 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
           src="/images/logo.png"
           alt="Vlietlanden B.V. logo" />
         <div className="flex">
-          <Button onClick={handleWorkScroll}>Work</Button>
+          <Button onClick={handleHomeScroll}>Home</Button>
           <Button onClick={handleAboutScroll}>About</Button>
-          <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
-            Contact
-          </Button>
+          <Button onClick={handleContactScroll}>Contact</Button>
           {mounted && theme && data.darkMode && (
             <Button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -110,7 +91,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               <img
                 className="h-6"
                 src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
-              ></img>
+              />
             </Button>
           )}
         </div>
