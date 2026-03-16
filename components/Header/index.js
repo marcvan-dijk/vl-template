@@ -62,7 +62,7 @@ const Header = ({ handleHomeScroll, handleAboutScroll, handleContactScroll }) =>
             >
               <div className="grid grid-cols-1">
                 <Button onClick={handleHomeScroll}>Home</Button>
-                <Button onClick={handleAboutScroll}>About</Button>
+                <Button onClick={handleAboutScroll}>Over ons</Button>
                 <Button onClick={handleContactScroll}>Contact</Button>
               </div>
 
@@ -82,7 +82,7 @@ const Header = ({ handleHomeScroll, handleAboutScroll, handleContactScroll }) =>
           alt="Vlietlanden B.V. logo" />
         <div className="flex">
           <Button onClick={handleHomeScroll}>Home</Button>
-          <Button onClick={handleAboutScroll}>About</Button>
+          <Button onClick={handleAboutScroll}>Over ons</Button>
           <Button onClick={handleContactScroll}>Contact</Button>
           {mounted && theme && data.darkMode && (
             <Button

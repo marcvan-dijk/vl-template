@@ -16,10 +16,6 @@ export default function Home() {
   // Ref
   const aboutRef = useRef();
   const contactRef = useRef();
-  const textOne = useRef();
-  const textTwo = useRef();
-  const textThree = useRef();
-  const textFour = useRef();
 
   // Handling Scroll
   const handleHomeScroll = () => {
@@ -48,7 +44,7 @@ export default function Home() {
 
   useIsomorphicLayoutEffect(() => {
     stagger(
-      [textOne.current, textTwo.current, textThree.current, textFour.current],
+      [aboutRef.current, contactRef.current],
       { y: 40, x: -10, transform: "scale(0.95) skew(10deg)" },
       { y: 0, x: 0, transform: "scale(1)" }
     );
@@ -70,8 +66,7 @@ export default function Home() {
           handleContactScroll={handleContactScroll}
         />
 
-        <div>
-          <div className="laptop:mt-20 mt-10">
+        {/* <div className="laptop:mt-20 mt-10">
             <div className="mt-5">
               <h1
                 ref={textOne}
@@ -98,9 +93,8 @@ export default function Home() {
                 {data.headerTaglineFour}
               </h1>
             </div>
-          </div>
-          <HomeContent />
-        </div>
+          </div> */}
+        <HomeContent />
         <div ref={aboutRef}>
           <AboutContent />
         </div>

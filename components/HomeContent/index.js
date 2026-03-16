@@ -9,16 +9,13 @@ const HomeContent = () => {
     setMounted(true);
   }, []);
   return (
-    <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
-      <div
-        className={`w-full p-2 mob:p-4 rounded-lg transition-all ease-out duration-300 ${mounted && theme === "dark" ? "hover:bg-slate-800" : "hover:bg-slate-50"
-          } hover:scale-105 link`}
-      >
-        <h1 className="text-3xl"></h1>
-        <p className="mt-5 opacity-40 text-xl">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        </p>
-      </div>
+    <div className="z-0" style={{ height: "100vh" }}>
+      <img
+        style={{ position: "absolute", top: 0, left: 0 }}
+        className="w-screen min-h-screen h-screen object-cover"
+        src="/images/droneview.jpg"
+        alt="Vlietlanden drone"
+      />
     </div>
   );
 };
