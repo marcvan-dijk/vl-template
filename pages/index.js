@@ -7,7 +7,8 @@ import { useIsomorphicLayoutEffect } from "../utils";
 import { stagger } from "../animations";
 import Footer from "../components/Footer";
 import Head from "next/head";
-
+import React, { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 
 // Local Data
 import data from "../data/portfolio.json";
@@ -16,6 +17,12 @@ export default function Home() {
   // Ref
   const aboutRef = useRef();
   const contactRef = useRef();
+  const [mounted, setMounted] = useState();
+  const { theme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Handling Scroll
   const handleHomeScroll = () => {
@@ -53,13 +60,17 @@ export default function Home() {
   return (
     <div className="relative">
       <Head>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
         <title>{data.name}</title>
       </Head>
 
       <div className="gradient-circle"></div>
       <div className="gradient-circle-bottom"></div>
 
-      <div className="container mx-auto mb-10">
+      <div className="container mx-auto mb-10 z-10">
         <Header
           handleHomeScroll={handleHomeScroll}
           handleAboutScroll={handleAboutScroll}
@@ -95,10 +106,13 @@ export default function Home() {
             </div>
           </div> */}
         <HomeContent />
+
         <div ref={aboutRef}>
           <AboutContent />
         </div>
-        <div ref={contactRef}>
+      </div>
+      <div className={`py-10 ${mounted && theme === "dark" ? "bg-slate-800" : "bg-slate-50"}`} >
+        <div className={`container mx-auto`} ref={contactRef}>
           <ContactContent />
         </div>
 
@@ -115,6 +129,9 @@ export default function Home() {
             {data.aboutpara}
           </p>
         </div> */}
+      </div>
+
+      <div className={`container mx-auto`} >
         <Footer />
       </div>
     </div>

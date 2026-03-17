@@ -17,15 +17,15 @@ const Header = ({ handleHomeScroll, handleAboutScroll, handleContactScroll }) =>
 
   return (
     <>
-      <Popover className="block tablet:hidden mt-5">
+      <Popover className="sticky z-10 top-0 block tablet:hidden mt-5">
         {({ open }) => (
           <>
-            <div className="flex items-center justify-between p-2 laptop:p-0">
+            <div className="flex items-center justify-between p-5 laptop:p-0">
               <img
                 onClick={() => router.push("/")}
-                className="font-medium p-2 laptop:p-0 link"
+                className="font-medium p-2 laptop:p-0 link inline-block"
                 src="/images/logo.png"
-                style={{ height: "30px" }}
+                style={{ height: "40px" }}
                 alt="Vlietlanden B.V. logo" />
 
               <div className="flex items-center">
@@ -57,7 +57,7 @@ const Header = ({ handleHomeScroll, handleAboutScroll, handleContactScroll }) =>
               </div>
             </div>
             <Popover.Panel
-              className={`absolute right-0 z-10 w-11/12 p-4 ${theme === "dark" ? "bg-slate-800" : "bg-white"
+              className={`absolute right-0 z-10 w-11/12 p-4 ${mounted && theme === "dark" ? "bg-slate-800" : "bg-white"
                 } shadow-md rounded-md`}
             >
               <div className="grid grid-cols-1">
@@ -70,14 +70,11 @@ const Header = ({ handleHomeScroll, handleAboutScroll, handleContactScroll }) =>
           </>
         )}
       </Popover>
-      <div
-        className={`mt-10 hidden flex-row items-center justify-between sticky ${theme === "light" && "bg-white"
-          } dark:text-white top-0 z-10 tablet:flex`}
-      >
+      <div className={`mt-10 px-5 hidden flex-row items-center justify-between sticky ${mounted && theme === "light" ? "bg-white" : ""} bg-opacity-70 dark:text-white top-0 z-10 tablet:flex`}>
         <img
           onClick={() => router.push("/")}
-          className="font-medium p-2 laptop:p-0 link"
-          style={{ height: "30px" }}
+          className="font-medium p-2 laptop:p-0 link inline-block"
+          style={{ height: "40px" }}
           src="/images/logo.png"
           alt="Vlietlanden B.V. logo" />
         <div className="flex">
@@ -86,11 +83,11 @@ const Header = ({ handleHomeScroll, handleAboutScroll, handleContactScroll }) =>
           <Button onClick={handleContactScroll}>Contact</Button>
           {mounted && theme && data.darkMode && (
             <Button
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              onClick={() => setTheme(mounted && theme === "dark" ? "light" : "dark")}
             >
               <img
                 className="h-6"
-                src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
+                src={`/images/${mounted && theme === "dark" ? "moon.svg" : "sun.svg"}`}
               />
             </Button>
           )}
