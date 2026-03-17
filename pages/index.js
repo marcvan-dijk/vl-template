@@ -58,7 +58,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="relative">
+    <div className="relative" suppressHydrationWarning>
       <Head>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -111,7 +111,7 @@ export default function Home() {
           <AboutContent />
         </div>
       </div>
-      <div className={`py-10 ${mounted && theme === "dark" ? "bg-slate-800" : "bg-slate-50"}`} >
+      <div className={`py-10 ${mounted && theme ? (theme === "dark" ? "bg-slate-800" : "bg-slate-50") : "bg-slate-50"}`} suppressHydrationWarning>
         <div className={`container mx-auto`} ref={contactRef}>
           <ContactContent />
         </div>
