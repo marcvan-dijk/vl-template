@@ -37,6 +37,7 @@ const Header = ({ handleHomeScroll, handleAboutScroll, handleContactScroll }) =>
                   >
                     <img className="h-6"
                       src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
+                      alt="Dark/light mode toggle icon"
                     />
                   </Button>
                 )}
@@ -52,7 +53,8 @@ const Header = ({ handleHomeScroll, handleAboutScroll, handleContactScroll }) =>
                         ? "cancel.svg"
                         : "cancel-white.svg"
                       }`}
-                  ></img>
+                    alt="Menu toggle icon"
+                  />
                 </Popover.Button>
               </div>
             </div>
