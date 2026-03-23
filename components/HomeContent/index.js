@@ -47,7 +47,7 @@ const HomeContent = () => {
             ref={textTwo}
             className="text-xl tablet:text-xl laptop:text-2xl laptopl:text-3xl mt-2 text-white font-extralight text-shadow-lg"
           >
-            Samen wonen in een bijzondere omgeving
+            Een bijzondere plek aan het water
           </h2>
         </div>
 
