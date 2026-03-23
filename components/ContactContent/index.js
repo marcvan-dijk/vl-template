@@ -26,8 +26,10 @@ const ContactContent = () => {
               </div>
               <div className="border-t border-gray-200 px-6 py-4">
                 <h3 className="text-lg font-medium text-gray-900">Contact</h3>
-                <p className="mt-1 text-gray-600">Email: <a href="mailto:info@vlietlanden.nl">info@vlietlanden.nl</a></p>
-                <p className="mt-1 text-gray-600">Telefoon: <a href="tel:+31228581491">+31(0) 228 - 58 14 91</a></p>
+                <p className="mt-1 text-gray-600">Email: <a href="mailto:secretariaat@vlietlanden.nl">secretariaat@vlietlanden.nl</a></p>
+                <p className="mt-1 text-gray-600">Telefoon 1: <a href="tel:+31625397473">06 - 25 39 74 73</a></p>
+                <p className="mt-1 text-gray-600">Telefoon 2: <a href="tel:+31625422076">06 - 25 42 20 76</a></p>
+                <p className="mt-3 text-gray-400 text-sm">Op werkdagen tijdens kantooruren bereikbaar</p>
               </div>
             </div>
           </div>

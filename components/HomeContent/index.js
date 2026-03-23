@@ -39,13 +39,13 @@ const HomeContent = () => {
         <div className="flex flex-col items-center justify-center flex-1">
           <h1
             ref={textOne}
-            className="text-3xl tablet:text-4xl laptop:text-5xl laptopl:text-6xl p-1 font-medium tracking-wide text-white"
+            className="text-3xl tablet:text-4xl laptop:text-5xl laptopl:text-6xl p-1 font-medium tracking-wide text-white text-shadow-lg/20"
           >
             Stichting De Vlietlanden
           </h1>
           <h2
             ref={textTwo}
-            className="text-xl tablet:text-xl laptop:text-2xl laptopl:text-3xl mt-2 text-white font-extralight"
+            className="text-xl tablet:text-xl laptop:text-2xl laptopl:text-3xl mt-2 text-white font-extralight text-shadow-lg"
           >
             Samen wonen in een bijzondere omgeving
           </h2>
@@ -58,9 +58,9 @@ const HomeContent = () => {
 
 
         <Button ref={buttonOne}
-          className="mb-8 text-center transition-all duration-300 ease-in text-sm rounded bg-green-600 px-4 py-2 text-sm text-white data-active:bg-green-700 data-hover:bg-green-500"
+          className="mb-8 text-center transition-all duration-100 ease-in text-sm rounded px-4 py-2 text-sm text-white socie-button"
           as="a"
-          href="https://socie.nl/"
+          href="https://socie.community/app/#/login?lang=nl_nl"
         >
           Bewoners login
         </Button>

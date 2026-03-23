@@ -71,3 +71,12 @@ body {
   background: inherit;
   border-radius: inherit;
 }
+
+.socie-button {
+  background: rgb(39 103 92);
+  color: white;
+
+  &:hover {
+    background: rgb(55, 131, 118);
+  }
+}

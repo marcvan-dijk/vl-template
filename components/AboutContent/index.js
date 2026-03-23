@@ -12,15 +12,14 @@ const AboutContent = () => {
     <div
       className={`w-full p-2 pt-0 mb-20 mob:p-4`}
     >
-      <h1 className="text-3xl">About</h1>
+      <h1 className="text-3xl">Welkom bij De Vlietlanden</h1>
       <p className="mt-5 opacity-40 text-xl">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        Een bijzondere plek aan het water, waar rust, natuur en samen wonen centraal staan. De Vlietlanden ligt in Wervershoof, in de gemeente Medemblik. Wat ooit begon als een bungalowpark, is in de loop der jaren uitgegroeid tot een volwaardige woonkern. Vandaag de dag wonen hier zo’n 500 mensen, verdeeld over 275 woningen. Wat ons verbindt, is de unieke omgeving. Wonen aan het water, veel groen om ons heen, ruimte en stilte – het draagt allemaal bij aan een prettig en ontspannen leven. Vanuit huis lopen we zo richting het IJsselmeer of maken we een wandeling of fietstocht in de natuur.
       </p>
       <p className="mt-5 opacity-40 text-xl">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt quam sed dui malesuada, vel blandit lorem sollicitudin. Praesent quis urna ut libero semper fringilla quis in odio. Suspendisse potenti. Etiam nunc ipsum, lobortis id justo ut, euismod gravida ante. Etiam aliquet rutrum dui, quis tempus diam pellentesque vitae. Praesent at porta nisi. Morbi ligula ipsum, congue at magna non, ullamcorper vehicula ante. Duis eu nulla porttitor, blandit libero eget, egestas urna. Sed congue tempor ante, eleifend aliquet nulla mollis aliquet. Vestibulum sagittis ac lorem tincidunt sodales. Donec euismod tristique nunc, consequat dignissim est porta id. Donec mi turpis, eleifend id auctor non, placerat sed massa.
-      </p>
+        Maar De Vlietlanden is meer dan alleen een mooie plek. Het is een gemeenschap. Jong en oud, gezinnen en alleenstaanden – iedereen vindt hier zijn plek. Bewoners zoeken elkaar op, organiseren activiteiten en helpen elkaar waar nodig. Nabuurschap krijgt hier echt de ruimte. Met de overname in 2026 zijn de infrastructuur van de woonkern en de besloten vennootschap De Vlietlanden eigendom geworden van Stichting De Vlietlanden. Samen werken we aan een duurzame toekomst, waarin leefbaarheid, verbondenheid en kwaliteit van wonen centraal staan.      </p>
       <p className="mt-5 opacity-40 text-xl">
-        Suspendisse at eleifend justo. Aliquam nec nulla suscipit, semper ante id, commodo nulla. Vivamus tincidunt at eros nec sagittis. In orci sapien, varius nec fermentum nec, feugiat eleifend dui. Phasellus vitae maximus dolor, at auctor orci. Aenean vestibulum mattis sapien, ac tincidunt risus interdum vel. Ut nulla lectus, ultricies ac ipsum ac, facilisis malesuada dui. Aenean volutpat nulla eget ligula aliquam facilisis volutpat quis lacus. Mauris pretium purus ligula, et suscipit ante tincidunt a. Curabitur imperdiet lorem facilisis nunc ullamcorper congue. Nam et risus at turpis porta egestas ut vel arcu. Vivamus ultricies pharetra nisl, ut faucibus odio ultricies sit amet.
+        De Vlietlanden is een plek waar je niet alleen woont, maar ook samen leeft.
       </p>
     </div>
   );
