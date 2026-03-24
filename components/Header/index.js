@@ -17,7 +17,7 @@ const Header = ({ handleHomeScroll, handleAboutScroll, handleContactScroll }) =>
 
   return (
     <>
-      <Popover className={`sticky ${mounted && theme === "light" ? "bg-white" : ""} bg-opacity-70 z-10 top-0 block tablet:hidden mt-5`}>
+      <Popover className={`sticky ${mounted && theme === "light" ? "bg-white" : ""} bg-opacity-80 z-10 top-0 block tablet:hidden mt-5`}>
         {({ open }) => (
           <>
             <div className="flex items-center justify-between py-2 px-5 laptop:p-0">
@@ -72,7 +72,7 @@ const Header = ({ handleHomeScroll, handleAboutScroll, handleContactScroll }) =>
           </>
         )}
       </Popover>
-      <div className={`mt-10 px-5 py-1 hidden flex-row items-center justify-between sticky ${mounted && theme === "light" ? "bg-white" : ""} bg-opacity-70 dark:text-white top-0 z-10 tablet:flex`}>
+      <div className={`mt-10 px-5 py-1 hidden flex-row items-center justify-between sticky ${mounted && theme === "light" ? "bg-white" : ""} bg-opacity-80 dark:text-white top-0 z-10 tablet:flex`}>
         <img
           onClick={() => router.push("/")}
           className="font-medium p-2 laptop:p-0 link inline-block"

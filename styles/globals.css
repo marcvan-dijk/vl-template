@@ -72,9 +72,15 @@ body {
   border-radius: inherit;
 }
 
+.header-text {
+  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
 .socie-button {
   background: rgb(39 103 92);
   color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 3.40282e38px;
 
   &:hover {
     background: rgb(55, 131, 118);

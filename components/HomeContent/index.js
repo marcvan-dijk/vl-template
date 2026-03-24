@@ -20,6 +20,7 @@ const HomeContent = () => {
     stagger(
       [textOne.current, textTwo.current, buttonOne.current],
       { y: 40, x: -10, transform: "scale(0.95) skew(10deg)" },
+      { y: 0, x: 0, transform: "scale(1)" },
       { y: 0, x: 0, transform: "scale(1)" }
     );
   }, []);
@@ -39,16 +40,24 @@ const HomeContent = () => {
         <div className="flex flex-col items-center justify-center flex-1">
           <h1
             ref={textOne}
-            className="text-3xl tablet:text-4xl laptop:text-5xl laptopl:text-6xl p-1 font-medium tracking-wide text-white text-shadow-lg/20"
+            className="text-3xl tablet:text-4xl laptop:text-5xl laptopl:text-6xl p-1 font-medium tracking-wide text-white header-text"
           >
             Stichting De Vlietlanden
           </h1>
           <h2
             ref={textTwo}
-            className="text-xl tablet:text-xl laptop:text-2xl laptopl:text-3xl mt-2 text-white font-extralight text-shadow-lg"
+            className="text-xl tablet:text-xl laptop:text-2xl laptopl:text-3xl mt-2 text-white font-extralight header-text"
           >
-            Een bijzondere plek aan het water
+            Wonen tussen water en groen
           </h2>
+          <Button ref={buttonOne}
+            className="mt-10 text-center transition-all font-medium duration-100 ease-in text-sm rounded px-8 py-2 text-sm text-white socie-button"
+            as="a"
+            href="https://socie.community/app/#/login?lang=nl_nl"
+          >
+            Inloggen Socie
+          </Button>
+
         </div>
 
         {/* <a ref={buttonOne}
@@ -57,13 +66,6 @@ const HomeContent = () => {
           style={{ background: "#28665b" }}>Bewoners login</a> */}
 
 
-        <Button ref={buttonOne}
-          className="mb-8 text-center transition-all duration-100 ease-in text-sm rounded px-4 py-2 text-sm text-white socie-button"
-          as="a"
-          href="https://socie.community/app/#/login?lang=nl_nl"
-        >
-          Bewoners login
-        </Button>
       </div>
     </div>
   );
