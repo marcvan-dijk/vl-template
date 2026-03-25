@@ -29,24 +29,22 @@ const HomeContent = () => {
   return (
     <div className="z-0 h-screen">
       <img
-        style={{ position: "absolute", top: "-40px", left: 0 }}
-        className="w-screen h-screen object-cover"
-        src="/images/droneview.png"
+        className="w-screen h-screen object-cover home-img"
+        src="/images/droneview-new.png"
         alt="Vlietlanden drone"
       />
 
-      <div className="absolute inset-0 flex flex-col items-center justify-center h-screen"
-        style={{ top: "-40px" }}>
+      <div className="absolute inset-0 flex flex-col items-center justify-center h-screen home-txt">
         <div className="flex flex-col items-center justify-center flex-1">
           <h1
             ref={textOne}
-            className="text-3xl tablet:text-4xl laptop:text-5xl laptopl:text-6xl p-1 font-medium tracking-wide text-white header-text"
+            className="text-2xl tablet:text-4xl laptop:text-5xl laptopl:text-6xl p-1 font-medium tracking-wide text-white header-text"
           >
             Stichting De Vlietlanden
           </h1>
           <h2
             ref={textTwo}
-            className="text-xl tablet:text-xl laptop:text-2xl laptopl:text-3xl mt-2 text-white font-extralight header-text"
+            className="text-lg tablet:text-xl laptop:text-2xl laptopl:text-3xl mt-2 text-white font-extralight header-text"
           >
             Wonen tussen water en groen
           </h2>
@@ -60,10 +58,6 @@ const HomeContent = () => {
 
         </div>
 
-        {/* <a ref={buttonOne}
-          className="mb-8 font-sans font-medium text-center transition-all duration-300 ease-in text-sm  rounded-md py-2 px-4 shadow-sm hover:shadow-md hover:bg-success-strong text-white"
-          href="https://socie.nl/"
-          style={{ background: "#28665b" }}>Bewoners login</a> */}
 
 
       </div>
